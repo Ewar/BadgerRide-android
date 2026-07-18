@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BadgerRide</string>
+    <string name="dash">––</string>
+
+    <string name="power">Power</string>
+    <string name="cadence">Cadence</string>
+    <string name="heart_rate">Heart rate</string>
+    <string name="speed">Speed</string>
+    <string name="distance">Distance</string>
+    <string name="time">Time</string>
+    <string name="calories">Calories</string>
+    <string name="unit_w">W</string>
+    <string name="unit_rpm">rpm</string>
+    <string name="unit_bpm">bpm</string>
+    <string name="unit_kcal">kcal</string>
+
+    <string name="power_hr">Power &amp; heart rate</string>
+    <string name="legend_power">Power W</string>
+    <string name="legend_hr">Heart rate bpm</string>
+    <string name="time_in_zone">Time in heart-rate zone</string>
+
+    <string name="erg">ERG</string>
+    <string name="resistance">Resistance</string>
+
+    <string name="settings">Settings</string>
+    <string name="connections">Connections</string>
+    <string name="smart_trainer">Smart trainer</string>
+    <string name="hr_monitor">Heart-rate monitor</string>
+    <string name="scan_for_devices">Scan for devices</string>
+    <string name="training_zones">Training zones</string>
+    <string name="max_hr">Max heart rate</string>
+    <string name="zones_note">Five zones as a share of max heart rate. Bins on the ride histogram recolor to match.</string>
+    <string name="from_power">From power</string>
+    <string name="from_hr">From heart rate</string>
+    <string name="rider_profile">Rider profile</string>
+    <string name="weight_kg">Weight, kg</string>
+    <string name="age">Age</string>
+    <string name="sex">Sex</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+    <string name="units">Units</string>
+    <string name="metric">Metric</string>
+    <string name="imperial">Imperial</string>
+</resources>

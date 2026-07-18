@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Classical design-system tokens (see BadgerRide.dc.html / styles.css in the design project).
+     Zone 2/4/5 are the design's oklch() values converted to sRGB. -->
+<resources>
+    <color name="bg">#F3F2F2</color>
+    <color name="text">#201F1D</color>
+    <!-- color-mix(text 55% / 70% / 16% / 14%, transparent) -->
+    <color name="text_muted">#8C201F1D</color>
+    <color name="text_label">#B3201F1D</color>
+    <color name="divider">#29201F1D</color>
+    <color name="ripple">#24201F1D</color>
+    <color name="accent">#B68235</color>
+    <color name="accent_700">#7D5411</color>
+    <color name="neutral_600">#7D7979</color>
+
+    <!-- Zone palette lives in Zones.kt; only the chart's HR line needs a resource. -->
+    <color name="hr_line">#A83825</color>
+</resources>

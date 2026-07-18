@@ -5,14 +5,61 @@
         android:usesPermissionFlags="neverForLocation" />
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
 
+    <!-- Ride-in-progress foreground service: keeps the process unfrozen with the
+         screen off so the ride keeps recording and the idle auto-finish fires.
+         connectedDevice eligibility is satisfied by the granted BLUETOOTH_CONNECT. -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- Health Connect: finished rides are written as indoor-cycling workouts.
+         Names must match HealthPermission.getWritePermission(...) in HealthSync. -->
+    <uses-permission android:name="android.permission.health.WRITE_EXERCISE" />
+    <uses-permission android:name="android.permission.health.WRITE_DISTANCE" />
+    <uses-permission android:name="android.permission.health.WRITE_ACTIVE_CALORIES_BURNED" />
+    <uses-permission android:name="android.permission.health.WRITE_HEART_RATE" />
+    <uses-permission android:name="android.permission.health.WRITE_POWER" />
+    <uses-permission android:name="android.permission.health.WRITE_SPEED" />
+
     <uses-feature android:name="android.hardware.bluetooth_le" android:required="true" />
 
-    <application android:label="Erg PoC" android:theme="@android:style/Theme.Material.Light">
-        <activity android:name=".MainActivity" android:exported="true">
+    <application
+        android:name=".BadgerApp"
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.BadgerRide">
+        <!-- screenOrientation is ignored on Android 16+ large screens (DiscouragedApi);
+             harmless on the phones this runs on. -->
+        <activity
+            android:name=".ui.RideActivity"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ui.SettingsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <service
+            android:name=".RideService"
+            android:exported="false"
+            android:foregroundServiceType="connectedDevice" />
+        <!-- Health Connect's permission screen links here ("why does this app need
+             access") - the Settings screen doubles as the rationale. The alias keeps
+             SettingsActivity itself unexported. -->
+        <activity-alias
+            android:name=".ui.HealthRationaleActivity"
+            android:targetActivity=".ui.SettingsActivity"
+            android:exported="true"
+            android:permission="android.permission.START_VIEW_PERMISSION_USAGE">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW_PERMISSION_USAGE" />
+                <category android:name="android.intent.category.HEALTH_PERMISSIONS" />
+            </intent-filter>
+        </activity-alias>
     </application>
 </manifest>

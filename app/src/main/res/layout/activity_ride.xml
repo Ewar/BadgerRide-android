@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingStart="14dp"
+    android:paddingEnd="14dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="6dp">
+
+    <!-- headline metrics -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.15"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+            <TextView style="@style/MetricLabel"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/power" />
+            <LinearLayout
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView android:id="@+id/powerValue"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/dash"
+                    android:textSize="58sp"
+                    android:fontFamily="@font/cormorant"
+                    android:textColor="@color/text"
+                    android:includeFontPadding="false"
+                    android:fontFeatureSettings="'tnum'" />
+                <TextView
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/unit_w"
+                    android:textSize="17sp"
+                    android:textColor="@color/neutral_600" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View android:layout_width="1dp" android:layout_height="match_parent"
+            android:layout_marginTop="14dp" android:layout_marginBottom="14dp"
+            android:background="@color/divider" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingStart="16dp"
+            android:paddingEnd="0dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+            <TextView style="@style/MetricLabel"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/cadence" />
+            <LinearLayout
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView android:id="@+id/cadenceValue"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/dash"
+                    android:textSize="46sp"
+                    android:fontFamily="@font/cormorant"
+                    android:textColor="@color/text"
+                    android:includeFontPadding="false"
+                    android:fontFeatureSettings="'tnum'" />
+                <TextView
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/unit_rpm"
+                    android:textSize="14sp"
+                    android:textColor="@color/neutral_600" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View android:layout_width="1dp" android:layout_height="match_parent"
+            android:layout_marginTop="14dp" android:layout_marginBottom="14dp"
+            android:background="@color/divider" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingStart="16dp"
+            android:paddingEnd="0dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+            <TextView style="@style/MetricLabel"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/heart_rate" />
+            <LinearLayout
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView android:id="@+id/hrValue"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/dash"
+                    android:textSize="46sp"
+                    android:fontFamily="@font/cormorant"
+                    android:textColor="@color/text"
+                    android:includeFontPadding="false"
+                    android:fontFeatureSettings="'tnum'" />
+                <TextView
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/unit_bpm"
+                    android:textSize="14sp"
+                    android:textColor="@color/neutral_600" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View android:layout_width="1dp" android:layout_height="match_parent"
+            android:layout_marginTop="14dp" android:layout_marginBottom="14dp"
+            android:background="@color/divider" />
+
+        <!-- secondary metrics 2×2 -->
+        <LinearLayout
+            android:layout_width="192dp"
+            android:layout_height="match_parent"
+            android:paddingStart="16dp"
+            android:paddingEnd="0dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:baselineAligned="false">
+                <LinearLayout
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView style="@style/MiniLabel"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="@string/speed" />
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView android:id="@+id/speedValue"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="@string/dash" android:textSize="17sp"
+                            android:textColor="@color/text" android:fontFeatureSettings="'tnum'" />
+                        <TextView android:id="@+id/speedUnit"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:textSize="10sp" android:textColor="@color/text_muted" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_marginStart="12dp"
+                    android:orientation="vertical">
+                    <TextView style="@style/MiniLabel"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="@string/distance" />
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView android:id="@+id/distValue"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="@string/dash" android:textSize="17sp"
+                            android:textColor="@color/text" android:fontFeatureSettings="'tnum'" />
+                        <TextView android:id="@+id/distUnit"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:textSize="10sp" android:textColor="@color/text_muted" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal" android:baselineAligned="false">
+                <LinearLayout
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView style="@style/MiniLabel"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="@string/time" />
+                    <TextView android:id="@+id/timeValue"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="@string/dash" android:textSize="17sp"
+                        android:textColor="@color/text" android:fontFeatureSettings="'tnum'" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_marginStart="12dp"
+                    android:orientation="vertical">
+                    <TextView style="@style/MiniLabel"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="@string/calories" />
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView android:id="@+id/calValue"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="@string/dash" android:textSize="17sp"
+                            android:textColor="@color/text" android:fontFeatureSettings="'tnum'" />
+                        <TextView
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:text="@string/unit_kcal"
+                            android:textSize="10sp" android:textColor="@color/text_muted" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- chart + zone histogram -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="11"
+            android:orientation="vertical"
+            android:background="@drawable/panel"
+            android:paddingStart="10dp" android:paddingEnd="10dp"
+            android:paddingTop="6dp" android:paddingBottom="4dp">
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical">
+                <TextView style="@style/PanelLabel"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/power_hr" />
+                <Space android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
+                <View android:layout_width="14dp" android:layout_height="2dp"
+                    android:background="@color/accent" />
+                <TextView
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="@string/legend_power"
+                    android:textSize="9sp" android:textColor="@color/text_muted" />
+                <View android:layout_width="14dp" android:layout_height="2dp"
+                    android:layout_marginStart="12dp"
+                    android:background="@color/hr_line" />
+                <TextView
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="@string/legend_hr"
+                    android:textSize="9sp" android:textColor="@color/text_muted" />
+            </LinearLayout>
+            <com.badgerride.ui.PowerHrChart
+                android:id="@+id/chart"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <Space android:layout_width="10dp" android:layout_height="1dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="9"
+            android:orientation="vertical"
+            android:background="@drawable/panel"
+            android:paddingStart="10dp" android:paddingEnd="10dp"
+            android:paddingTop="6dp" android:paddingBottom="5dp">
+            <TextView style="@style/PanelLabel"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/time_in_zone" />
+            <com.badgerride.ui.ZoneHistogram
+                android:id="@+id/histogram"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="3dp" />
+            <LinearLayout
+                android:id="@+id/zoneLegend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- control bar -->
+    <View android:layout_width="match_parent" android:layout_height="1dp"
+        android:layout_marginTop="7dp"
+        android:background="@color/divider" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView android:id="@+id/brand"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="18sp"
+            android:fontFamily="@font/cormorant_semibold"
+            android:textColor="@color/text" />
+
+        <LinearLayout
+            android:id="@+id/modeSeg"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_marginStart="14dp"
+            android:orientation="horizontal"
+            android:background="@drawable/seg_container">
+            <TextView android:id="@+id/segErg" style="@style/SegOpt"
+                android:layout_width="wrap_content" android:layout_height="match_parent"
+                android:text="@string/erg" />
+            <View android:layout_width="1dp" android:layout_height="match_parent"
+                android:background="@color/divider" />
+            <TextView android:id="@+id/segRes" style="@style/SegOpt"
+                android:layout_width="wrap_content" android:layout_height="match_parent"
+                android:text="@string/resistance" />
+        </LinearLayout>
+
+        <Space android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
+
+        <TextView android:id="@+id/btnMinusBig" style="@style/BtnStep"
+            android:layout_width="wrap_content" android:layout_height="44dp" />
+        <TextView android:id="@+id/btnMinusSml" style="@style/BtnStep"
+            android:layout_width="wrap_content" android:layout_height="44dp"
+            android:layout_marginStart="14dp" />
+
+        <LinearLayout
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp" android:layout_marginEnd="14dp"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+            <TextView android:id="@+id/targetValue"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:textSize="23sp"
+                android:fontFamily="@font/cormorant_semibold"
+                android:textColor="@color/text"
+                android:includeFontPadding="false"
+                android:fontFeatureSettings="'tnum'" />
+            <TextView android:id="@+id/targetSub" style="@style/MiniLabel"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <TextView android:id="@+id/btnPlusSml" style="@style/BtnStep"
+            android:layout_width="wrap_content" android:layout_height="44dp" />
+        <TextView android:id="@+id/btnPlusBig" style="@style/BtnStep"
+            android:layout_width="wrap_content" android:layout_height="44dp"
+            android:layout_marginStart="14dp" />
+
+        <Space android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
+
+        <TextView android:id="@+id/statusTag"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:background="@drawable/tag_outline"
+            android:textColor="@color/accent"
+            android:textSize="11sp"
+            android:paddingStart="10dp" android:paddingEnd="10dp"
+            android:paddingTop="5dp" android:paddingBottom="5dp"
+            android:maxLines="1" />
+    </LinearLayout>
+</LinearLayout>

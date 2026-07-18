@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Minimal badger mark: pale face with the two dark stripes, on the accent ground. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <path
+        android:fillColor="#F8F4F4"
+        android:pathData="M34,56 a20,24 0 1,0 40,0 a20,24 0 1,0 -40,0 z" />
+    <path
+        android:strokeColor="#201F1D" android:strokeWidth="6"
+        android:strokeLineCap="round"
+        android:pathData="M46,41 L46,69" />
+    <path
+        android:strokeColor="#201F1D" android:strokeWidth="6"
+        android:strokeLineCap="round"
+        android:pathData="M62,41 L62,69" />
+    <path
+        android:fillColor="#201F1D"
+        android:pathData="M50,76 a4,3 0 1,0 8,0 a4,3 0 1,0 -8,0 z" />
+</vector>
