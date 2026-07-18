@@ -5,7 +5,6 @@ resistance mode and reads a **Polar H10** heart-rate strap over BLE. Grown out o
 single-file Erg PoC (first commit); the BLE/FTMS core is the PoC's, restructured.
 
 Two screens, styled after the *Classical* design system
-(claude.ai/design project, `BadgerRide.dc.html`):
 
 - **Ride** (landscape, launcher): live power / cadence / heart rate, speed, distance,
   moving time and calories; a power + heart-rate chart with the dashed ERG target;
@@ -15,6 +14,8 @@ Two screens, styled after the *Classical* design system
 - **Settings** (portrait): connection status + scan, max-HR-derived training zones,
   calorie source (power: 1 kJ ≈ 1 kcal, or heart rate: Keytel), rider profile
   (weight/age/sex), metric/imperial units. Everything persists.
+
+  ![Screenshot of a Ride screen](Screenshot_20260717-203303.png)
 
 ## How it works
 
